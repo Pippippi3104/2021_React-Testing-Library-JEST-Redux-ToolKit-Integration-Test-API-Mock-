@@ -43,7 +43,16 @@
   - npm run start
   - npm run test
 - Scripts
+
   - "test": "react-scripts test --env=jsdom --verbose"
     - it に記載したテスト説明が出力される
+
+- Example
+  - Render
+    - screen
+    - expect
+  - RenderInput
+    - userEvent
+    - jest.fn()
 
 ### [Return to Contents](#contents)
