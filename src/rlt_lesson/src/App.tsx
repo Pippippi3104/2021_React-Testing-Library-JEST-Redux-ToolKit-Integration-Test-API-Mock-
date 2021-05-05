@@ -1,7 +1,13 @@
-import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import { Counter } from "./features/counter/Counter";
+import "./App.css";
+import RenderInput from "./RenderInput";
+
+/*追加 output関数*/
+export const output = (text: string) => {
+  console.log(text);
+};
 
 function App() {
   return (
@@ -9,6 +15,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <Counter />
+        <RenderInput outputConsole={output} />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
