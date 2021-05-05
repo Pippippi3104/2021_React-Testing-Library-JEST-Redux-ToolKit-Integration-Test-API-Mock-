@@ -33,15 +33,6 @@
 # Section02
 
 - Source Code
-
   - [Click here](https://github.com/GomaGoma676/react-testing-library-lesson/tree/master/src)
-
-- Create Project
-  - reference
-    - [1 コマンドで React+Redux+TypeScript アプリを作る](https://qiita.com/costeka/items/59baf885cf281078a243)
-    - [Lint と Format を Git のコミット時に自動でかける方法](https://blog.solunita.net/posts/how-to-lint-and-format-by-git-hook/)
-  - command
-    - npx create-react-app "project-name" --template redux-typescript
-    - npm start
 
 ### [Return to Contents](#contents)
