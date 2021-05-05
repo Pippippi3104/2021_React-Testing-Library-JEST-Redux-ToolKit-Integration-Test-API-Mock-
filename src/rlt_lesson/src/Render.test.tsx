@@ -11,12 +11,12 @@ describe("Rendering", () => {
     // screen.debug(screen.getByRole("heading")); // h1の内容を見る
     // screen.debug(screen.getByText("Udemy")); // 指定した文字列を検索する
 
-    expect(screen.getByRole("heading")).toBeTruthy(); // 指定した要素が存在しているかを判定
-    expect(screen.getByRole("textbox")).toBeTruthy(); // 指定した要素が存在しているかを判定
-    expect(screen.getAllByRole("button")[0]).toBeTruthy(); // 指定した要素が存在しているかを判定
-    expect(screen.getAllByRole("button")[1]).toBeTruthy(); // 指定した要素が存在しているかを判定
+    expect(screen.getByRole("heading")).toBeTruthy(); // 指定した役割の要素が存在しているかを判定
+    expect(screen.getByRole("textbox")).toBeTruthy(); // 指定した役割の要素が存在しているかを判定
+    expect(screen.getAllByRole("button")[0]).toBeTruthy(); // 指定した役割の要素が存在しているかを判定
+    expect(screen.getAllByRole("button")[1]).toBeTruthy(); // 指定した役割の要素が存在しているかを判定
     expect(screen.getByText("Udemy")).toBeTruthy(); // 指定した要素が存在しているかを判定
-    expect(screen.getByTestId("copyright")).toBeTruthy(); // 指定した要素が存在しているかを判定
+    expect(screen.getByTestId("copyright")).toBeTruthy(); // 指定した役割の要素が存在しているかを判定
 
     expect(screen.queryByText("Udeeemy")).toBeNull(); // 指定した要素が存在していないことを判定
   });

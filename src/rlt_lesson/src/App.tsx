@@ -3,11 +3,19 @@ import logo from "./logo.svg";
 import { Counter } from "./features/counter/Counter";
 import "./App.css";
 import RenderInput from "./RenderInput";
+import FrameworkList from "./FrameworkList";
 
-/*追加 output関数*/
+// 追加 output関数
 export const output = (text: string) => {
   console.log(text);
 };
+
+// ダミーデータ
+export const data = [
+  { id: 1, item: "React" },
+  { id: 2, item: "Angular" },
+  { id: 3, item: "Vue" },
+];
 
 function App() {
   return (
@@ -15,7 +23,14 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <Counter />
+
+        {/* lesson04 */}
         <RenderInput outputConsole={output} />
+
+        {/* lesson06 */}
+        {/* <FrameworkList frameworks={data} /> */}
+        <FrameworkList />
+
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
