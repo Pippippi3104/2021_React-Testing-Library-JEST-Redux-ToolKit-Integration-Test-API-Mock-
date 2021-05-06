@@ -2,8 +2,10 @@ import React from "react";
 import logo from "./logo.svg";
 import { Counter } from "./features/counter/Counter";
 import "./App.css";
+
 import RenderInput from "./RenderInput";
 import FrameworkList from "./FrameworkList";
+import MockServer from "./MockServer";
 
 // 追加 output関数
 export const output = (text: string) => {
@@ -30,6 +32,9 @@ function App() {
         {/* lesson06 */}
         {/* <FrameworkList frameworks={data} /> */}
         <FrameworkList />
+
+        {/* lesson09 */}
+        <MockServer />
 
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
