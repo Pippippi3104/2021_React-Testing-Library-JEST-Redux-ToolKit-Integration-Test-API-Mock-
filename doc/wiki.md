@@ -65,5 +65,6 @@
     - rest, (req, res, ctx)
   - customCounter
     - redux
+    - Reducer.Test
 
 ### [Return to Contents](#contents)
