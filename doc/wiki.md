@@ -61,6 +61,7 @@
   - UseEffectRender
     - axios
   - MockServer
-    -
+    - setupServer
+    - rest, (req, res, ctx)
 
 ### [Return to Contents](#contents)

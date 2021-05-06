@@ -34,7 +34,7 @@ const MockServer = () => {
 
   const fetchUser = async () => {
     await axios
-      .get("https://jsonplaceholder.typicode.com/users/11")
+      .get("https://jsonplaceholder.typicode.com/users/1")
       .then((res: Response) => {
         const { username } = res.data;
         setUsername(username);
