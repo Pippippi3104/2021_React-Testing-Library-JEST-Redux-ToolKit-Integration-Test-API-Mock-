@@ -32,13 +32,27 @@ const sleep = async (msec: number) => {
   const start = new Date().getTime();
   while (new Date().getTime() - start < msec);
 };
-export const fetchDummy = createAsyncThunk(
-  "fetch/dummy",
-  async (num: number) => {
-    await sleep(2000);
-    return num;
+export const fetchDummy = createAsyncThunk<
+  // PayloadCreatorの返却値の型
+  number,
+  // PayloadCreatorの第一引数の型
+  { num: number },
+  // PayloadCreatorの第二引数(ThunkAPI)の型
+  {
+    // rejectした時の返却値の型
+    rejectValue: {
+      num: number;
+      msg: string;
+    };
   }
-);
+>("fetch/dummy", async (args, thunkApi) => {
+  try {
+    await sleep(2000);
+  } catch (e) {
+    return thunkApi.rejectWithValue({ num: args.num, msg: e });
+  }
+  return args.num;
+});
 export const fetchJSON = createAsyncThunk("fetch/api", async () => {
   const res: Response = await axios.get(
     "https://jsonplaceholder.typicode.com/users/1"
@@ -94,7 +108,7 @@ export const customCounterSlice = createSlice({
       state.value = 100 + action.payload;
     });
     builder.addCase(fetchDummy.rejected, (state, action) => {
-      state.value = 100 /* - action.payload */;
+      state.value = 100 - (action.payload?.num ?? 0);
     });
     builder.addCase(fetchJSON.fulfilled, (state, action) => {
       state.username = action.payload;
