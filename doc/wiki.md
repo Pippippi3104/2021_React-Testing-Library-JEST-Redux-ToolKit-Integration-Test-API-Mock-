@@ -66,5 +66,6 @@
   - customCounter
     - redux
     - Reducer.Test
+    - ExtraReducer.Test
 
 ### [Return to Contents](#contents)
