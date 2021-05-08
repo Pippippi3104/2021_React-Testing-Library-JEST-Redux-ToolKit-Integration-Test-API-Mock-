@@ -8,6 +8,7 @@ import FrameworkList from "./FrameworkList";
 import MockServer from "./MockServer";
 import Redux from "./Redux";
 import ReduxAsync from "./ReduxAsync";
+import CustomHooks from "./CustomHooks";
 
 // 追加 output関数
 export const output = (text: string) => {
@@ -43,6 +44,9 @@ function App() {
 
         {/* lesson17 */}
         <ReduxAsync />
+
+        {/* lesson20 */}
+        <CustomHooks />
 
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
