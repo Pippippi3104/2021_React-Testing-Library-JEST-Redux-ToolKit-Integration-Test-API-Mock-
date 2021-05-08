@@ -7,6 +7,7 @@ import RenderInput from "./RenderInput";
 import FrameworkList from "./FrameworkList";
 import MockServer from "./MockServer";
 import Redux from "./Redux";
+import ReduxAsync from "./ReduxAsync";
 
 // 追加 output関数
 export const output = (text: string) => {
@@ -39,6 +40,9 @@ function App() {
 
         {/* lesson16 */}
         <Redux />
+
+        {/* lesson17 */}
+        <ReduxAsync />
 
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
