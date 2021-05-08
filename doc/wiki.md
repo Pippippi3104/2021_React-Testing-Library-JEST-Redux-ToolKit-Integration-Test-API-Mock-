@@ -69,5 +69,6 @@
     - ExtraReducer.Test
     - Redux.test
     - ReduxAsync.test
+    - ReduxAsyncAPI.test
 
 ### [Return to Contents](#contents)
